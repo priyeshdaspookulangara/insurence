@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">InsureSwift</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_clients">Clients</string>
+    <string name="title_policies">Policies</string>
+    <string name="title_leads">Leads</string>
+    <string name="title_reports">Reports</string>
+    <string name="add_new_client">Add New Client</string>
+    <string name="client_profile_picture">Client profile picture</string>
+    <string name="hint_client_name">Client Name</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_address">Address</string>
+    <string name="button_save">Save</string>
+</resources>

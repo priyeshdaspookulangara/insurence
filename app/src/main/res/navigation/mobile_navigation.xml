@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.insureswift.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_clients"
+        android:name="com.insureswift.ui.clients.ClientsFragment"
+        android:label="@string/title_clients"
+        tools:layout="@layout/fragment_clients" >
+        <action
+            android:id="@+id/action_clientsFragment_to_addClientFragment"
+            app:destination="@id/addClientFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_policies"
+        android:name="com.insureswift.ui.policies.PoliciesFragment"
+        android:label="@string/title_policies"
+        tools:layout="@layout/fragment_policies" />
+
+    <fragment
+        android:id="@+id/navigation_leads"
+        android:name="com.insureswift.ui.leads.LeadsFragment"
+        android:label="@string/title_leads"
+        tools:layout="@layout/fragment_leads" />
+
+    <fragment
+        android:id="@+id/navigation_reports"
+        android:name="com.insureswift.ui.reports.ReportsFragment"
+        android:label="@string/title_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/addClientFragment"
+        android:name="com.insureswift.ui.clients.AddClientFragment"
+        android:label="Add New Client"
+        tools:layout="@layout/fragment_add_client" />
+</navigation>
