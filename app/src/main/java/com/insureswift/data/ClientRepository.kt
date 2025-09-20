@@ -19,4 +19,8 @@ class ClientRepository(private val clientDao: ClientDao) {
     suspend fun delete(client: Client) {
         clientDao.deleteClient(client)
     }
+
+    fun getClientById(id: Long): Flow<Client> {
+        return clientDao.getClientById(id)
+    }
 }

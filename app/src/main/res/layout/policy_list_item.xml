@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_view_policy_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_policies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/policy_icon" />
+
+        <TextView
+            android:id="@+id/text_view_policy_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_policy_icon"
+            app:layout_constraintTop_toTopOf="@id/image_view_policy_icon"
+            tools:text="Auto Insurance" />
+
+        <TextView
+            android:id="@+id/text_view_policy_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceListItemSecondary"
+            app:layout_constraintEnd_toEndOf="@id/text_view_policy_type"
+            app:layout_constraintStart_toStartOf="@id/text_view_policy_type"
+            app:layout_constraintTop_toBottomOf="@id/text_view_policy_type"
+            tools:text="POL-123456789" />
+
+        <TextView
+            android:id="@+id/text_view_expiration_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/expires_on"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/text_view_policy_number"
+            app:layout_constraintTop_toBottomOf="@id/text_view_policy_number" />
+
+        <TextView
+            android:id="@+id/text_view_expiration_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="?attr/colorError"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_view_expiration_label"
+            app:layout_constraintStart_toEndOf="@id/text_view_expiration_label"
+            tools:text="2025-12-31" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -25,13 +25,27 @@
         android:id="@+id/navigation_policies"
         android:name="com.insureswift.ui.policies.PoliciesFragment"
         android:label="@string/title_policies"
-        tools:layout="@layout/fragment_policies" />
+        tools:layout="@layout/fragment_policies" >
+        <action
+            android:id="@+id/action_policiesFragment_to_addPolicyFragment"
+            app:destination="@id/addPolicyFragment" />
+        <action
+            android:id="@+id/action_policiesFragment_to_policyDetailsFragment"
+            app:destination="@id/policyDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_leads"
         android:name="com.insureswift.ui.leads.LeadsFragment"
         android:label="@string/title_leads"
-        tools:layout="@layout/fragment_leads" />
+        tools:layout="@layout/fragment_leads" >
+        <action
+            android:id="@+id/action_leadsFragment_to_addLeadFragment"
+            app:destination="@id/addLeadFragment" />
+        <action
+            android:id="@+id/action_leadsFragment_to_leadDetailsFragment"
+            app:destination="@id/leadDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_reports"
@@ -42,5 +56,47 @@
         android:id="@+id/addClientFragment"
         android:name="com.insureswift.ui.clients.AddClientFragment"
         android:label="Add New Client"
-        tools:layout="@layout/fragment_add_client" />
+        tools:layout="@layout/fragment_add_client">
+        <argument
+            android:name="leadName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="leadContact"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPolicyFragment"
+        android:name="com.insureswift.ui.policies.AddPolicyFragment"
+        android:label="Add New Policy"
+        tools:layout="@layout/fragment_add_policy" />
+    <fragment
+        android:id="@+id/policyDetailsFragment"
+        android:name="com.insureswift.ui.policies.PolicyDetailsFragment"
+        android:label="Policy Details"
+        tools:layout="@layout/fragment_policy_details">
+        <argument
+            android:name="policyId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLeadFragment"
+        android:name="com.insureswift.ui.leads.AddLeadFragment"
+        android:label="Add New Lead"
+        tools:layout="@layout/fragment_add_lead" />
+    <fragment
+        android:id="@+id/leadDetailsFragment"
+        android:name="com.insureswift.ui.leads.LeadDetailsFragment"
+        android:label="Lead Details"
+        tools:layout="@layout/fragment_lead_details">
+        <argument
+            android:name="leadId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_leadDetailsFragment_to_addClientFragment"
+            app:destination="@id/addClientFragment" />
+    </fragment>
 </navigation>

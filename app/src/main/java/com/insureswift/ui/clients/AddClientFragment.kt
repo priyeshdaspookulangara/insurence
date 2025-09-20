@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.insureswift.data.model.Client
 import com.insureswift.databinding.FragmentAddClientBinding
 
@@ -17,6 +18,7 @@ class AddClientFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: ClientsViewModel by activityViewModels()
+    private val args: AddClientFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +30,9 @@ class AddClientFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.editTextName.setText(args.leadName)
+        binding.editTextPhone.setText(args.leadContact)
 
         binding.buttonSave.setOnClickListener {
             saveClient()

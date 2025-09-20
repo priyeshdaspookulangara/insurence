@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lead_statuses">
+        <item>New</item>
+        <item>Contacted</item>
+        <item>Qualified</item>
+        <item>Converted</item>
+    </string-array>
+</resources>

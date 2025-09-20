@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_view_lead_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_leads"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/lead_icon" />
+
+        <TextView
+            android:id="@+id/text_view_lead_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/chip_status"
+            app:layout_constraintStart_toEndOf="@id/image_view_lead_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John Appleseed" />
+
+        <TextView
+            android:id="@+id/text_view_lead_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceListItemSecondary"
+            app:layout_constraintEnd_toEndOf="@id/text_view_lead_name"
+            app:layout_constraintStart_toStartOf="@id/text_view_lead_name"
+            app:layout_constraintTop_toBottomOf="@id/text_view_lead_name"
+            tools:text="john.appleseed@example.com" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="New" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

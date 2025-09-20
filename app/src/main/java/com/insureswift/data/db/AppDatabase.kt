@@ -12,6 +12,8 @@ import com.insureswift.data.model.Policy
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun clientDao(): ClientDao
+    abstract fun policyDao(): PolicyDao
+    abstract fun leadDao(): LeadDao
     // Add other DAOs here later
 
     companion object {
